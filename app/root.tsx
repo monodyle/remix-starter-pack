@@ -10,7 +10,11 @@ import {
 } from '@remix-run/react'
 
 export const links: LinksFunction = () => {
-  return []
+  return [
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossOrigin: 'anonymous' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap' },
+  ]
 }
 
 export function Layout({ children }: { children: React.ReactNode }) {
