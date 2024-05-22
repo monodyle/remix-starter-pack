@@ -13,6 +13,8 @@
     "types": ["@remix-run/node", "vite/client"],
     "allowJs": true,
     "strict": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
 
     "noEmit": true, // Vite takes care of building everything, not tsc.
     "esModuleInterop": true,
