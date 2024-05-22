@@ -1,18 +1,23 @@
-import antfu from '@antfu/eslint-config'
+import antfu from "@antfu/eslint-config"
 
 export default antfu({
   react: true,
   typescript: true,
+  gitignore: true,
   formatters: true,
-  rules: {
-    'no-console': ['warn', { allow: ['debug'] }],
-
-    'ts/no-redeclare': 'off',
-
-    'react/prop-types': 'off',
-    'react-refresh/only-export-components': 'off',
-
-    'n/prefer-global/process': 'off',
+  stylistic: {
+    jsx: true,
+    indent: 2,
+    quotes: "double",
+    semi: false,
   },
-  ignores: ['./tsconfig.json'],
+  rules: {
+    "no-console": ["warn", { allow: ["debug"] }],
+    "ts/no-redeclare": "off",
+    "ts/consistent-type-definitions": ["warn", "type"],
+    "react/prop-types": "off",
+    "react-refresh/only-export-components": "off",
+    "n/prefer-global/process": "off",
+  },
+  ignores: ["./tsconfig.json"],
 })
